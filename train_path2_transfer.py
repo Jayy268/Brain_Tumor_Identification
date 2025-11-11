@@ -8,7 +8,7 @@ from model_builder import build_transfer_model  # <-- CHANGED
 # --- 1. Set Parameters ---
 IMG_SIZE = (224, 224)
 BATCH_SIZE = 32
-DATASET_PATH = '/content/drive/My Drive/Computer Vision Project/datasets/brain_tumor_dataset'
+DATASET_PATH = 'brain_tumor_dataset'
 COLOR_MODE_P2 = 'rgb'  # <-- CHANGED
 INPUT_SHAPE_P2 = (224, 224, 3) # <-- CHANGED
 LEARNING_RATE = 0.0001 # Same as our best custom model
@@ -49,5 +49,6 @@ history_p2 = model_p2.fit(
     epochs=EPOCHS,
     callbacks=[early_stop, reduce_lr]
 )
+
 
 print("Training complete for Path 2.")
